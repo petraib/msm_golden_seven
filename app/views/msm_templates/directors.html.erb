@@ -11,7 +11,7 @@
     <p>Name: <%= the_d.name %></p>  
     <p>DOB: <%= the_d.dob %></p>  
     <p>Bio: <%= the_d.bio %></p> 
-    <p>Image url: <%= the_d.image_ %></p> 
+<a href = <%= the_d.find(@dir_id).image_url %> >Image url</a> 
 
     <div class="caption">
       <a href="/directors/<%= the_d.id %>" class="btn btn-default btn-block">

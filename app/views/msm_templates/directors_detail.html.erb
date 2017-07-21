@@ -7,7 +7,7 @@
 <img src = <%= Director.find(@dir_id).image_url%> >  
 
 <p>Bio: <%= Director.find(@dir_id).bio %></p>  
-<p>Image url: <%= Director.find(@dir_id).image_url %></p> 
+<a href = <%= Director.find(@dir_id).image_url %> >Image ur</a> 
 
 <a href = "/delete_director/<%=@dir_id%>">Delete director</a>
 
