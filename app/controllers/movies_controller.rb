@@ -117,7 +117,7 @@ class MoviesController < ApplicationController
 
     m.save
     
-    redirect_to("/movies")
+    redirect_to("/movies/"+@m_id)
   end
   
 end
