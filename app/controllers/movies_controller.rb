@@ -27,8 +27,8 @@ class MoviesController < ApplicationController
      d.save
      
     @dir_id = d[:id]
-   render("msm_templates/directors_detail.html.erb") 
-
+   #render("msm_templates/directors_detail.html.erb") 
+    redirect_to("/directors")
   end
   
   def d_detail
