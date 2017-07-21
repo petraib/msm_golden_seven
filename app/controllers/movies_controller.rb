@@ -41,7 +41,25 @@ class MoviesController < ApplicationController
       
       @dir_id = params[:director_id]
       Director.destroy(@dir_id)
-      redirect_to("msm_templates/directors.html.erb") 
+      redirect_to("/directors") 
   end
   
+   def d_edit
+      
+      @dir_id = params[:director_id]
+      render("msm_templates/directors_edit.html.erb") 
+  end
+  
+   def d_update
+      
+      d = Director.find(params[:director_id])
+      d.name = params[:name]
+      d.dob = params[:dob]
+      d.image_url = params[:image_url]
+      d.bio = params[:bio]
+
+      d.save
+      
+      redirect_to("/directors/" +  params[:director_id]) 
+  end
 end

@@ -1,4 +1,11 @@
-hi
+<h1> Director Detail</h1>
+
 <%= @dir_id %>
-  
-<%= Director.find(@dir_id).name %>
+<p>Name: <%= Director.find(@dir_id).name %></p>  
+<p>DOB: <%= Director.find(@dir_id).dob %></p>  
+
+<img src = <%= Director.find(@dir_id).image_url%> >  
+
+<p>Bio: <%= Director.find(@dir_id).bio %></p>  
+
+<a href = "/directors">Return to Directors Tab</a>

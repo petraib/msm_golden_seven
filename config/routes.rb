@@ -10,13 +10,16 @@ Rails.application.routes.draw do
   get("/directors/new_form", { :controller => "movies", :action => "d_new" })
   get("/directors/create", { :controller => "movies", :action => "d_process_new" })
 
-  #read
-  get("/directors", { :controller => "movies", :action => "d_index" })
-  get("/directors/:director_id", { :controller => "movies", :action => "d_detail" })
-
+  
   #delete
   get("/delete_director/:director_id", { :controller => "movies", :action => "d_delete" })
   
-  
+  #edit
+  get("/directors/:director_id/edit_form", { :controller => "movies", :action => "d_edit" })
+  get("/directors/update/:director_id", { :controller => "movies", :action => "d_update" })
+
+  #read
+  get("/directors", { :controller => "movies", :action => "d_index" })
+  get("/directors/:director_id", { :controller => "movies", :action => "d_detail" })
 
 end

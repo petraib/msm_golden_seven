@@ -7,13 +7,17 @@
 <% @all_directors.each do |the_d| %>
   <div class="thumbnail">
     <img src="<%= the_d.image_url %>">
+    
+    <p>Name: <%= the_d.name %></p>  
+    <p>DOB: <%= the_d.dob %></p>  
+    <p>Bio: <%= the_d.bio %></p>  
 
     <div class="caption">
       <a href="/directors/<%= the_d.id %>" class="btn btn-default btn-block">
         Show Details
       </a>
 
-      <a href="/directors/<%= the_d.id %>/edit" class="btn btn-default btn-block">
+      <a href="/directors/<%= the_d.id %>/edit_form" class="btn btn-default btn-block">
         Edit
       </a>
 
