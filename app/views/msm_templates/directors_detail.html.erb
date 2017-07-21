@@ -1,0 +1,18 @@
+<h1> Director Detail</h1>
+
+<%= @dir_id %>
+<p>Name: <%= Director.find(@dir_id).name %></p>  
+<p>DOB: <%= Director.find(@dir_id).dob %></p>  
+
+<img src = <%= Director.find(@dir_id).image_url%> >  
+
+<p>Bio: <%= Director.find(@dir_id).bio %></p>  
+
+<p>Image url: "<%=Director.find(@dir_id).image_url %>"</p>  
+
+
+<a href = "/delete_director/<%=@dir_id%>">Delete director</a>
+
+<a href = "/directors/<%=@dir_id%>/edit_form">Edit director</a>
+
+<a href = "/directors">Return to Directors Tab</a>
