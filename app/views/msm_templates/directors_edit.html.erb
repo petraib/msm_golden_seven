@@ -3,7 +3,7 @@
 <form action="/directors/update/<%= @dir_id%>">
   <div>
     <label for="image_url">
-      Image URL
+      Image url
     </label>
 
     <input id="image_url" type="text" name="image_url" value ="<%= Director.find(@dir_id).image_url %>">
@@ -27,7 +27,7 @@
   
    <div>
     <label for="dob">
-      DOB
+      Dob
     </label>
 
     <input id="dob" type="text" name="dob" value ="<%= Director.find(@dir_id).dob %>">
@@ -35,6 +35,6 @@
   
   
   <button>
-    Edit Director
+    Update director
   </button>
 </form>
