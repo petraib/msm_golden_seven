@@ -1,0 +1,22 @@
+<h1> Movies</h1>
+
+
+<a href="/movies/new_form">Add Movie </a>
+
+<% @all_movies.each do |the_movie| %>
+
+        <h2>Title: <%=the_movie.title %> </h2>
+        
+        <img src = <%=the_movie.image_url %> >
+        
+        <p>Duration: <%=the_movie.duration %> </p>
+        <p>Description: <%=the_movie.description %> </p>
+        <p>Image_url: <%=the_movie.image_url %> </p>
+        
+        <a href = "/movies/<%=the_movie.id %>">Detail movie</a>
+        <a href = "/movies//<%=the_movie.id %>/edit_form">Update movie</a>
+        <a href = "/delete_movie/<%=the_movie.id %>">Delete movie</a>
+
+<% end %>
+
+

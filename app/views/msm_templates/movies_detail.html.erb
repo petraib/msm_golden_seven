@@ -1,0 +1,14 @@
+<h1> Movie Detail</h1>
+
+<p>Title: <%= Movie.find(@m_id).title %> </p>
+
+<h2>Title: <%=Movie.find(@m_id).title %> </h2>
+        
+<img src = <%=Movie.find(@m_id).image_url %> >
+
+<p>Duration: <%=Movie.find(@m_id).duration %> </p>
+<p>Description: <%=Movie.find(@m_id).description %> </p>
+<p>Image_url: <%=Movie.find(@m_id).image_url %> </p>
+
+<a href = "/movies//<%=the_movie.id %>/edit_form">Update movie</a>
+<a href = "/delete_movie/<%=@m_id %>">Delete movie</a>
