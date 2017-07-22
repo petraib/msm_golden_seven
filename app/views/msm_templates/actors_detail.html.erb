@@ -1,0 +1,12 @@
+<h1> Actor Details</h1>
+
+<p>Name: <%=Actor.find(@a_id).name %> </p>
+
+<img src= <%=Actor.find(@a_id).image_url%> >
+
+<p>Dob: <%=Actor.find(@a_id).dob%></p>
+<p>Bio: <%=Actor.find(@a_id).bio%></p>
+<p>Image url: <%=Actor.find(@a_id).image_url%></p>
+
+<a href= "/actors/<%=Actor.find(@a_id).id%>/edit_form">Edit actor</a>
+<a href= "/delete_actor/<%=Actor.find(@a_id).id%>">Delete actor</a>

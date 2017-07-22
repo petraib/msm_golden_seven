@@ -1,0 +1,35 @@
+<h1> Update movie</h1>
+
+<form action = "/movies/update/<%=@m_id %>">
+    <div>
+        <label for = "title">Title</label>
+        <input id = "title" type = "text" name = "title" value = "<%= Movie.find(@m_id).title %>" >
+    </div>
+    
+    <div>
+        <label for = "year">Year</label>
+        <input id = "year" type = "text" name = "year" value = "<%= Movie.find(@m_id).year %>" >
+    </div>
+    
+    <div>
+        <label for = "duration">Duration</label>
+        <input id = "duration" type = "text" name = "duration" value = "<%= Movie.find(@m_id).duration %>" >
+    </div>
+    
+    <div>
+        <label for = "description">Description</label>
+        <input id = "description" type = "text" name = "description" value = "<%= Movie.find(@m_id).description %>" >
+    </div>
+    
+    <div>
+        <label for = "image_url">Image url</label>
+        <input id = "image_url" type = "text" name = "image_url" value = "<%= Movie.find(@m_id).image_url %>" >
+    </div>
+    
+    <p><%= Movie.find(@m_id).description %></p>
+    
+    
+    <button>
+        Update movie
+    </button>
+</form>
