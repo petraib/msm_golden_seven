@@ -148,7 +148,7 @@ class MoviesController < ApplicationController
       a.save
       
         @a_id = a.id
-    redirect_to("/actors/")
+    redirect_to("/actors")
   end
   
   def a_delete
