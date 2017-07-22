@@ -1,0 +1,18 @@
+<h1> All Actors </h1>
+
+
+<% @all_actors.each do |the_a| %>
+
+<p>Name: <%=the_a.name%></p>
+<img src= <%=the_a.image_url%> >
+
+<p>Dob: <%=the_a.dob%></p>
+<p>Bio: <%=the_a.bio%></p>
+<p>Image url: <%=the_a.image_url%></p>
+
+<a href= "/actors/<%=the_a.id%>">Show details</a>
+<a href= "/actors/<%=the_a.id%>/edit_form">Edit actor</a>
+<a href= "/delete_actor/<%=the_a.id%>">Delete actor</a>
+
+
+<% end %>

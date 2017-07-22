@@ -120,4 +120,62 @@ class MoviesController < ApplicationController
     redirect_to("/movies/"+@m_id)
   end
   
+  ################################################# actors #########################################
+  
+  def a_index
+      
+      @all_actors = Actor.all.order(:created_at => :desc)
+      render("msm_templates/actors.html.erb")
+  end
+  
+  def a_detail
+      
+      @a_id = params[:actor_id]
+      render("msm_templates/actors_detail.html.erb")
+  end
+  
+  def a_new
+      render("msm_templates/actors_new.html.erb")
+  end
+  
+  def a_create
+      a= Actor.new()
+      a.name = params[:name]
+      a.dob = params[:dob]
+      a.bio = params[:bio]
+      a.image_url = params[:image_url]
+      
+      a.save
+      
+        @a_id = a.id
+    redirect_to("/actors/")
+  end
+  
+  def a_delete
+     @a_id = params[:actor_id]
+     
+     Actor.destroy(@a_id)
+     
+     redirect_to("/actors")
+  end
+  
+  def a_edit
+      @a_id = params[:actor_id]
+      render ("msm_templates/actors_edit.html.erb")
+  end
+  
+  def a_update
+      @a_id = params[:actor_id]
+      
+      a = Actor.find(@a_id)
+      a.name = params[:name]
+      a.dob = params[:dob]
+      a.bio = params[:bio]
+      a.image_url = params[:image_url]
+      
+      a.save
+
+    redirect_to("/actors/" + @a_id )
+  end
+  
 end
